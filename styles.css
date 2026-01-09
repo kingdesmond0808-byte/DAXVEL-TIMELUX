@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#headerNav{
+    /* border: 1px solid #000; */
+    background-color: #ffffff;
+}
+
+.genLayout{
+    max-width: 1000px;
+    width: auto;
+}
+.innerNav{
+    /* border: 1px solid green;s */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#toggle, .hamburger {
+    display: none;
+}
+     /* logo section */
+
+.DTL {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #f5a623; 
+}
+
+.DTL > img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.DTL > span {
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: "Source Code Pro", monospace;
+}
+
+.DTL, .thin {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+   /* logo section end */
+
+    /* location section */
+.innerNav > p {
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;    
+    font-size: 13px;
+    font-family: "Source Code Pro", monospace;
+    /* text-transform: capitalize; */
+    gap: 4px;
+    font-weight: 700;
+}
+
+.innerNav > p > img {
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+}
+
+
+ .innerNav > p > span {
+    font-weight: 400;
+    font-size: 14px;
+ }
+   /* location section end */
+
+   /* search section */
+
+.searchBox {
+    /* border: 1px solid orange; */
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: "Source Code Pro", monospace;
+    /* font-weight: 400; */
+    font-size: 13px;
+    text-transform: capitalize;
+    margin: 0 10px;
+}
+
+.searchBox > span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.searchBox > span > a > i {
+    font-size: 13px;
+    color: #FFB30E;
+}
+.searchBox > span > h4 {
+    font-size: 13px;
+    font-weight: 700;
+    font-family: "Source Code Pro", monospace;
+}
+
+
+
+
+   /* search section end */
+
+    /* button section */
+.searchBox, .innerBtn {
+  gap: 30px;
+}
+
+ .innerBtn {
+    border: 1px solid #fff;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding: 6px 11px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: -1px -0px 6px #FFAE004A;
+}
+
+.innerBtn > img {
+    width: 14px;
+    height: 12px;
+    object-fit: contain;
+}
+
+.innerBtn > h3 {
+    font-family: "Source Code Pro", monospace;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+
+
