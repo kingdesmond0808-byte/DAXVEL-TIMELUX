@@ -7,17 +7,15 @@
 }
 
 
-#headerNav{
-    /* border: 1px solid #000; */
+nav {
     background-color: #ffffff;
 }
 
-.genLayout{
+.genWrapper{
     max-width: 1000px;
-    width: auto;
+    margin: auto;
 }
 .innerNav{
-    /* border: 1px solid green;s */
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -33,7 +31,8 @@
   display: flex;
   align-items: center;
   gap: 2px;
-  color: #f5a623; 
+  color:  #0b1c2d;
+   
 }
 
 .DTL > img {
@@ -64,6 +63,7 @@
     /* text-transform: capitalize; */
     gap: 4px;
     font-weight: 700;
+    color: #c9a24d;
 }
 
 .innerNav > p > img {
@@ -91,6 +91,7 @@
     font-size: 13px;
     text-transform: capitalize;
     margin: 0 10px;
+    cursor: pointer;
 }
 
 .searchBox > span {
@@ -106,11 +107,8 @@
     font-size: 13px;
     font-weight: 700;
     font-family: "Source Code Pro", monospace;
+    color: #c9a24d;
 }
-
-
-
-
    /* search section end */
 
     /* button section */
@@ -118,7 +116,7 @@
   gap: 30px;
 }
 
- .innerBtn {
+.innerBtn {
     border: 1px solid #fff;
     display: flex;
     gap: 6px;
@@ -126,7 +124,9 @@
     padding: 6px 11px;
     border-radius: 8px;
     background-color: #ffffff;
-    box-shadow: -1px -0px 6px #FFAE004A;
+    box-shadow: -1px -0px 8px #FFAE004A;
+    color: #c9a24d;
+    cursor: pointer;
 }
 
 .innerBtn > img {
@@ -140,6 +140,103 @@
     font-size: 13px;
     font-weight: 700;
     text-transform: capitalize;
+}
+    /* button section end */
+
+  /* landingContent section */
+
+
+.landing {
+    background: #0a0a0a;
+    padding: 60px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-eve;
+    gap: 40px;
+    
+    
+}
+
+.landingContent {
+    /* border: 1px solid #000; */
+    /* background-color: #0f0f0f; */
+    /* margin-right: 13rem; */
+    /* padding: 5px; */
+    /* margin: 5px 120px; */
+    
+}
+
+.landingContent > h1 {
+    font-family: "Source Code Pro", monospace;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    padding: 10px 0px 0px 0px;
+}
+
+.landingContent > p {
+    font-family: "Source Code Pro", monospace;
+    font-size: 12px;
+    margin: 10px 0;
+    text-transform: capitalize;
+    padding: 0px 0px 10px 0px;
+    color: #c9a24d;
+}
+
+    /*tabContent section */
+
+.tabContent {
+    background-color: #fff;
+    padding: 10px 5px;
+    width: 35rem;
+    border-radius: 12px;
+}
+
+
+.landingTab {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.active{
+
+    background-color: #0f0f0f;
+}
+
+.landingTab > button {
+    border: 1px solid #fff;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding: 6px 11px;
+    border-radius: 8px;
+    /* background-color: #ffffff; */
+    box-shadow: -1px -0px 8px #FFAE004A;
+    color: #c9a24d;
+    margin-bottom: 15px;
+    font-family: "Source Code Pro", monospace;
+    cursor: b 
+     ;
+
+}
+
+.active2 {
+    background-color: #ffffff;
+    font-weight: 500;
+}
+
+.active > span {
+    color: #c9a24d;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family: "Source Code Pro", monospace;
+
+}
+
+.tabSearch {
+    border: 1px solid gray;
+    padding: 8px 16px;
 }
 
 
