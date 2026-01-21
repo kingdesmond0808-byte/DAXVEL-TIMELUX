@@ -10,7 +10,7 @@ nav {
   background-color: #ffffff;
   position: fixed;
   width: 100%;
-  z-index: 1000;
+  z-index: 2;
 }
 
 .genWrapper {
@@ -22,7 +22,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: initial;
+  padding: 10px 5px;
+  gap: 30px;
 }
 
 #toggle,
@@ -32,17 +33,22 @@ nav {
 /* logo section */
 
 .DTL {
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   gap: 2px;
   color: #0b1c2d;
 }
-
-.DTL > img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
+.dtl {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  /* border: 2px solid #000; */
+}
+.dtl > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  object-fit: cover;
 }
 
 .DTL > span {
@@ -58,14 +64,12 @@ nav {
 /* logo section end */
 
 /* location section */
-.innerNav > p {
-  /* border: 1px solid blue; */
+.address {
   display: flex;
   align-items: center;
-  font-size: 13px;
+  font-size: 10px;
   font-family: "Source Code Pro", monospace;
-  /* text-transform: capitalize; */
-  gap: 4px;
+  gap: 8px;
   font-weight: 700;
   color: #c9a24d;
 }
@@ -85,12 +89,10 @@ nav {
 /* search section */
 
 .searchBox {
-  /* border: 1px solid orange; */
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 15px;
   font-family: "Source Code Pro", monospace;
-  /* font-weight: 400; */
   font-size: 13px;
   text-transform: capitalize;
   margin: 0 10px;
@@ -117,11 +119,6 @@ nav {
 /* button section */
 
 .innerBtn {
-  gap: 30px;
-}
-
-.innerBtn {
-  border: 1px solid #fff;
   display: flex;
   gap: 6px;
   align-items: center;
@@ -129,7 +126,6 @@ nav {
   border-radius: 8px;
   background-color: #0f2027;
   box-shadow: -1px -0px 8px #0f2027;
-  color: #c9a24d;
   cursor: pointer;
 }
 
@@ -144,30 +140,34 @@ nav {
   font-size: 13px;
   font-weight: 700;
   text-transform: capitalize;
+  color: #c9a24d;
 }
 /* button section end */
 
 /* landingContent section */
 
-.landing {
+.heroContainer {
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  padding: 80px 80px;
+  padding: 7rem 0 0;
+  gap: 30px;
+}
 
+.heroContentContainer {
   display: flex;
-  align-items: center;
-  justify-content: space-eve;
-  gap: 40px;
+  gap: 5rem;
+  /* border-radius: 2px solid #fff; */
+  height: 50vh;
+  overflow: hidden;
 }
 
-.landingContent {
-  /* border: 1px solid #000; */
-  /* background-color: #0f0f0f; */
-  margin-right: 13rem;
-  /* padding: 5px; */
-  /* margin: 5px 120px; */
+.heroContent {
+  flex: 1;
+  /* border: 1px solid black; */
+  margin-left: 4rem;
+  padding-bottom: 5rem;
 }
 
-.landingContent > h1 {
+.heroContent > h1 {
   font-family: "Source Code Pro", monospace;
   font-size: 2rem;
   font-weight: 700;
@@ -175,7 +175,7 @@ nav {
   padding: 15px 0px 15px 0px;
 }
 
-.landingContent > p {
+.heroContent > p {
   font-family: "Source Code Pro", monospace;
   font-size: 12px;
   margin: 10px 0;
@@ -186,7 +186,7 @@ nav {
 
 /*tabContent section */
 
-.tabContent {
+.heroTabContent {
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 15px 15px;
@@ -194,7 +194,7 @@ nav {
   border-radius: 12px;
 }
 
-.landingTab {
+.heroTab {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -204,7 +204,7 @@ nav {
   background-color: #0b1c2d;
 }
 
-.landingTab > button {
+.heroTab > button {
   border: 1px solid #fff;
   display: flex;
   gap: 6px;
@@ -240,10 +240,12 @@ nav {
   margin-top: 20px;
   display: flex;
   gap: 10px;
+  width: 100%;
+
 }
 
 .tabSearch > input {
-  flex: 1;
+  flex: 0.5;
   padding: 14px;
   outline: none;
   border-radius: 8px;
@@ -259,7 +261,7 @@ nav {
   height: 40px;
   font-weight: 500;
   background: #0b1c2d;
-   box-shadow: -1px -0px 8px #0f2027;
+  box-shadow: -1px -0px 8px #0f2027;
   color: #c9a24d;
   border: none;
   padding: 22px;
@@ -271,99 +273,86 @@ nav {
 .tabSearch > button > i {
   font-size: 16px;
   padding: 6px;
+   color: #c9a24d
 }
 
 /* tabContent section end  */
 
 /* landingimg section  */
-/*  
-.lanimg {
-display: flex;
-  gap: 15px;
-  overflow: hidden;
-} */
-.landingImg {
-  position: relative;
-  
+
+.heroimageCont {
+  margin-top: 6rem;
+  flex: 1;
 }
 
-.landingImg > img {
-  position: absolute;
-  width: 350px;
-  max-width: none;
-  right: -19rem;
-  bottom: -130px;
-  border-radius: 50%;
-  padding: 40px;
-  margin-right: -60px;
+.image {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+}
+
+.image > img {
+  width: 100%;
+  height: 100%;
+  /* width: 380px; */
+  /* max-width: none; */
+  border-radius: 100%;
 }
 
 /* landingImg section end*/
 
 /* mainImg section  */
 
-.cardContainer {
+.display-container {
   display: flex;
-  gap: 20px;
-  /* flex-wrap: wrap;   */
-  font-family: "Source Code Pro", monospace;
-  background-color: #f9f9f9;
   justify-content: center;
+  flex-wrap: wrap;
+  background: #ccc;
   padding: 20px;
 }
 
-.card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 220px;
-  height: 25%;
+.display-card {
+  width: 200px;
+  background-color: #ccc;
+  margin-top: 100px;
+  border-radius: 8px;
   overflow: hidden;
-  /* display: inline; */
-  position: relative;
+  margin: 20px;
+  text-align: start;
+}
+.card {
+  width: 200px;
+  height: 150px;
+  border-radius: 6px;
 }
 
 .card > img {
   width: 100%;
-  height: 80%;
-  display: block;
+  height: 100%;
   border-radius: 6px;
-
-  /* position: relative; */
+  object-fit: cover;
 }
 
-.discountBadge {
-  position: absolute;
-  top: 15.7rem;
-  left: -8px;
-  background-color: #ff9f1c;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 8px;
-  font-size: 25px;
-  font-weight: 700;
+.display-card-content {
+  padding: 16px;
 }
+.display-card-content > h3 {
+  font-size: 18px;
 
-.cardContent {
-  padding: 15px;
-  text-align: start;
-  background: linear-gradient(to left, #0f2027, #203a43, #2c5364);
-}
-
-.productName {
-  font-weight: bold;
   margin-bottom: 8px;
-  color: #fff;
+  color: #d6ae58;
+  text-transform: capitalize;
 }
 
-.daysRemaining {
-  background-color: #ffd6a5;
-  color: #ff7f50;
-  font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 6px;
+.display-card-content > a {
   display: inline-block;
-  font-weight: 700;
+  padding: 8px 16px;
+  background-color: #0f2027;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 8px;
+  color: #c9a24d;
+  text-align: start;
 }
 
 /* how it works section */
@@ -377,24 +366,31 @@ display: flex;
   padding: 60px 40px;
   text-align: center;
   color: #ff9900;
-  font-size: 20px;
-  margin-bottom: 40px;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
-.steps  {
+.steps {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
   flex-wrap: wrap;
+  padding: 0px 20px 80px;
+  
 }
 
 .step {
-  max-width: 220px;
+  width: 200px;
+  background-color: #fffaf3;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
 }
 
 .icon {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   /* background-color: #ff9900; */
   border-radius: 50%;
   display: flex;
@@ -404,30 +400,31 @@ display: flex;
 }
 
 .icon > img {
-  font-size: 28px;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
 }
 
 .step > h3 {
-  font-size: 16px;
+  font-size: 11px;
   margin-bottom: 8px;
   color: #222;
 }
 
 .step > p {
-  font-size: 13px;
+  font-size: 9px;
   color: #666;
   line-height: 1.5;
 }
 /* popular section */
 
 .popular {
-  background:linear-gradient(to bottom, #0f2027, #203a43, #2c5364); 
-      font-family: "Source Code Pro", monospace;
-     
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  font-family: "Source Code Pro", monospace;
 }
 
-.popular > h2 {
-  padding: 40px 20px; 
+.popularcontent > h2 {
+  padding: 40px 20px;
   text-align: center;
   color: #ff9900; /* change color */
   font-size: 30px;
@@ -439,13 +436,12 @@ display: flex;
   display: flex;
   align-items: center;
   gap: 20px;
-  
 }
 
 .btn {
   border: none;
   background-color: #ffa500;
-  color: fff;
+  color: #fff;
   font-size: 20px;
   width: 40px;
   height: 40px;
@@ -453,16 +449,14 @@ display: flex;
   border-radius: 50%;
 }
 
-
 .popularList {
   display: flex;
   gap: 15px;
   overflow: hidden;
-
 }
 
-.popularCard{
-  background:linear-gradient(to to, #0f2027, #203a43, #2c5364); ;
+.popularCard {
+  background: linear-gradient(to to, #0f2027, #203a43, #2c5364);
   width: 200px;
   padding: 10px;
   border-radius: 10px;
@@ -489,20 +483,17 @@ display: flex;
 .popularCard > button {
   margin-top: 8px;
   background: #0f2027;
-   box-shadow: -1px -0px 8px #0f2027;
-   border: none;
-   color: #c9a24d;
-   cursor: pointer;
-   padding: 6px 10px;
-   border-radius: 8px;
+  box-shadow: -1px -0px 8px #0f2027;
+  border: none;
+  color: #c9a24d;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
 }
-
 
 /* popular section end  */
 
 /* foodGrid section */
-
-
 
 .foodGridTitle {
   /* background:linear-gradient(to top, #0f2027, #203a43, #2c5364);  */
@@ -519,22 +510,20 @@ display: flex;
   text-transform: capitalize;
 }
 
-
 .foodGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
-
 .foodCard {
   background: #000;
   padding: 10px;
   border-radius: 10px;
   position: relative;
-   margin-bottom: 20px;
-   margin-right:20px;
-   margin-left: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .foodCard > img {
@@ -542,7 +531,7 @@ display: flex;
   border-radius: 8px;
   display: block;
   padding: 0;
-   margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .foodCard > .fCimg {
@@ -556,11 +545,10 @@ display: flex;
   margin: 10px 0;
   color: #c9a24d;
   font-size: 15px;
-  right: 5px; 
+  right: 5px;
   bottom: 2.8rem;
   position: absolute;
 }
-
 
 .foodCard > .one {
   background: #84e79b;
@@ -573,9 +561,9 @@ display: flex;
 }
 
 .foodCard > button {
-    background: #F1722833;
+  background: #f1722833;
   border: none;
-  color: #F17228;
+  color: #f17228;
   padding: 6px 12px;
   border-radius: 8px;
   cursor: pointer;
@@ -594,7 +582,7 @@ display: flex;
 
 /* foodGrid section end */
 
-/* WatchSelection section */
+/*  featured Brand section */
 
 .WatchSelection {
   background: linear-gradient(to bottom, #fff7e6, #ffcc66);
@@ -607,7 +595,7 @@ display: flex;
   font-family: "Source Code Pro", monospace;
 }
 
-.WatchSelectionTitle{
+.WatchSelectionTitle {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -624,7 +612,7 @@ display: flex;
 }
 
 .button {
-    border: none;
+  border: none;
   background-color: #ffa500;
   color: #fff;
   font-size: 20px;
@@ -635,7 +623,7 @@ display: flex;
 }
 
 .button2 {
-      border: none;
+  border: none;
   background-color: #ffa500;
   color: #fff;
   font-size: 20px;
@@ -644,7 +632,7 @@ display: flex;
   cursor: pointer;
   border-radius: 50%;
 }
-  
+
 .watchList {
   display: flex;
   align-items: center;
@@ -658,17 +646,23 @@ display: flex;
   text-align: center;
 }
 
-
-.watchItem > img{
-  width: 80%;
+.watch-image {
+  width: 100px;
+  border-radius: 100%;
   height: 100px;
-  border-radius: 80%;
-  object-fit: cover;
+  background-color: #f17228;
+}
+
+.watch-image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  object-fit: contain;
 }
 
 .watchItem > a {
   text-decoration: none;
-  color: #F17228;
+  color: #f17228;
 }
 
 .watchItem > a > p {
@@ -677,10 +671,140 @@ display: flex;
   font-weight: 700;
 }
 
+/* DEALS CONTAINER SECTION */
+
+.deals {
+  background: #fff;
+  font-family: "Source Code Pro", monospace;
+}
+
+.deal-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  margin: 60px auto;
+  max-width: auto;
+}
+
+.deal-card {
+  background: #fff;
+  display: flex;
+  overflow: hidden;
+  gap: 30px;
+  /* padding: 10px; */
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.deal-image {
+  width: 38rem;
+  height: 300px;
+}
+
+.deal-image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+}
+
+.deal-text {
+  width: 30%;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+
+.deal-text > h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.deal-text > h3 > span {
+  font-size: 25px;
+  color: #d6ae58;
+}
+
+.deal-text > p {
+  color: #d6ae58;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.deal-text > button {
+  background: #ff9f0d;
+  border: none;
+  padding: 12px 80px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 3rem;
+}
 
 
 
 
+@media (min-width: 260px) and (max-width: 460px) {
+  .hamburger {
+    display: block;
+    font-size: 20px;
+    color: #000;
+    font-weight: 900;
+    
+  }
 
+  .DTL {
+    font-size: 15px;
+  }
 
+  .address {
+    display: none;
+  }
 
+  .searchBox {
+    display: none;
+  }
+
+  .innerNav {
+    /* border: 2px solid black; */
+    width: calc(100% - 30px);
+  }
+
+  .heroContainer {
+    padding: 5rem 0 0;
+  }
+
+  .heroContentContainer {
+    border: 2px solid greenyellow;
+    width: calc(100% - 30px);
+    flex-direction:column ;
+    overflow: scroll;
+  
+  }
+
+  .heroContent {
+     width: calc(100% - 30px);
+    margin-left: 0;
+  }
+
+  .heroContent > h1 {
+    font-size: 25px
+
+  }
+
+  .heroimageCont {
+     width: calc(100% - 30px);
+    
+  }
+
+  .image > img  {
+    margin-top: -80px;
+  }
+
+  .display-card {
+     width: calc(100% - 30px);
+    flex-direction: row;
+  }
+}
